@@ -8,9 +8,10 @@
     {% if user.is_authenticated %}
         Hi {{ user.username }}!
         <p><a href="{% url 'login:logout' %}">Log Out</a></p>
+        <p><a href="{% url 'login:password_reset' %}">Reset Password</a></p>
     {% else %}
         <p>You are not logged in</p>
-        <a href="{% url 'login:signup' %}">Sign Up</a>
-        <a href="{% url 'login:login' %}">Log In</a>
+        <p><a href="{% url 'login:login' %}">Log In</a></p>
+        <p><a href="{% url 'login:signup' %}">Sign Up</a></p>
     {% endif %}
 {% endblock %}
